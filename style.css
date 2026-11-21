@@ -64,8 +64,10 @@ section:first-of-type { border-top: 0; }
 
 /* ---- Brand mark (two cards, as in the app) ---- */
 .brand { display: inline-flex; align-items: center; gap: 10px; }
-.mark { display: inline-flex; gap: 3px; }
-.mark-card { width: 10px; height: 13px; border-radius: 3px; }
+/* One geometry everywhere (2026-11-21): the app icon's proportions from the card width --
+   height 1.23x, gap 0.21x, corners 0.23x, outline 0.058x but at least 3px (at most 0.15x). */
+.mark { display: inline-flex; gap: 2.1px; }
+.mark-card { width: 10px; height: 12.3px; border-radius: 2.3px; }
 .mark-a { background: var(--text); }
 .mark-b { border: 1.5px solid var(--text); }
 
@@ -82,7 +84,7 @@ section:first-of-type { border-top: 0; }
 .mark-large .mark-card { width: 52px; height: 64px; border-radius: 12px; }
 .mark-large .mark-a { background: #0c0c0e; animation: card-a-move 2.8s ease both, card-a-fade 2.8s ease both; }
 .mark-large .mark-b { border: 3px solid #0c0c0e; animation: card-b-move 2.8s ease both, card-b-fade 2.8s ease both; }
-.splash-word { font: 700 15px 'IBM Plex Mono', ui-monospace, Menlo, monospace; letter-spacing: 0.28em; color: #000; }
+.splash-word { font: 700 30px -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; letter-spacing: -0.01em; color: #0c0c0e; }
 .splash-bar { position: absolute; bottom: 62px; width: 92px; height: 2px; border-radius: 1px; background: rgba(12, 12, 14, 0.18); overflow: hidden; }
 .splash-bar span { display: block; height: 100%; width: 0; background: #0c0c0e; animation: splash-bar 2.8s linear forwards; }
 @keyframes splash-out { to { opacity: 0; visibility: hidden; } }
@@ -403,10 +405,10 @@ button.bar:not(.own) { background: rgba(242, 241, 238, 0.42); }
 .app-status svg { height: 13px; width: auto; fill: #f2f1ee; color: #f2f1ee; }
 /* The app name exactly like the site's brand top left: mark and name, same white. */
 .app-title { display: flex; align-items: center; gap: 14px; margin: 14px 0 18px 6px; font-size: 34px; font-weight: 700; letter-spacing: -0.02em; color: #f2f1ee; }
-.app-title .mark { gap: 5px; }
-.app-title .mark-card { width: 18px; height: 24px; border-radius: 5px; }
+.app-title .mark { gap: 3.78px; }
+.app-title .mark-card { width: 18px; height: 22.14px; border-radius: 4.14px; }
 .app-title .mark-a { background: #f2f1ee; }
-.app-title .mark-b { border: 2.5px solid #f2f1ee; box-sizing: border-box; }
+.app-title .mark-b { border: 2.7px solid #f2f1ee; box-sizing: border-box; }
 .app .score-card { padding: 26px; border-radius: 30px; gap: 18px; }
 .app .score-top, .app .chip { font-size: 12px; }
 .app .score-line b { font-size: 80px; }
@@ -441,9 +443,9 @@ button.bar:not(.own) { background: rgba(242, 241, 238, 0.42); }
 .step-caption .step-text { margin: 0; }
 /* The app name on the phone a size smaller. */
 .app-title { font-size: 27px; gap: 11px; margin-top: 10px; margin-bottom: 16px; }
-.app-title .mark { gap: 4px; }
-.app-title .mark-card { width: 14px; height: 19px; border-radius: 4px; }
-.app-title .mark-b { border-width: 2px; }
+.app-title .mark { gap: 2.94px; }
+.app-title .mark-card { width: 14px; height: 17.22px; border-radius: 3.22px; }
+.app-title .mark-b { border-width: 2.1px; }
 
 /* "DU BIST HIER" as a green pill above your bar, pointing down at it. */
 .bars { padding-top: 46px; }
@@ -679,9 +681,9 @@ nav a[aria-current="page"] { color: var(--accent); }
 .bar-off { background: #22231c; }
 /* Header: bigger logo and navigation */
 .site-header .brand { font-size: 24px; gap: 12px; letter-spacing: -0.01em; }
-.site-header .mark { gap: 4px; }
-.site-header .mark-card { width: 14px; height: 18px; border-radius: 4px; }
-.site-header .mark-b { border-width: 2px; }
+.site-header .mark { gap: 2.94px; }
+.site-header .mark-card { width: 14px; height: 17.22px; border-radius: 3.22px; }
+.site-header .mark-b { border-width: 2.1px; }
 .site-header nav a { font-size: 14px; }
 .site-header nav { gap: 6px 20px; }
 .sec + .band { margin-top: 0; }
